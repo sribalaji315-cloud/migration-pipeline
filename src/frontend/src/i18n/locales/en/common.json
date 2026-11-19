@@ -1,0 +1,38 @@
+{
+  "appName": "MD Pipeline",
+  "navigation": {
+    "overview": "Overview",
+    "waves": "BOM waves",
+    "items": "Item class",
+    "issues": "Issues",
+    "typeChanges": "Type changes",
+    "swing": "Swing BOM",
+    "migrationTool": "Migration Tool",
+    "runs": "Runs",
+    "reference": "Bluestar reference"
+  },
+  "roles": {
+    "Viewer": "Viewer",
+    "Analyst": "Analyst",
+    "Approver": "Approver",
+    "Admin": "Admin"
+  },
+  "actions": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "switchRole": "Switch role",
+    "help": "Help",
+    "search": "Search"
+  },
+  "auth": {
+    "signInTitle": "Sign in to MD Pipeline"
+  },
+  "fields": {
+    "email": "Email",
+    "password": "Password"
+  },
+  "status": {
+    "signedInAs": "Signed in as {{name}}",
+    "unknownRole": "No role"
+  }
+}

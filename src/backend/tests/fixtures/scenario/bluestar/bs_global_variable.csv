@@ -1,0 +1,5 @@
+VARIABLETYPE,ALLOWMANUAL,EXTERNALID,UNIT,VALUELISTID,VARIABLEDATATYPE,VARIABLEVALUES
+Global_Color,No,,,Global_Color,StringType,VALUE_LIST
+Global_Width,No,,mm,,IntegerType,
+Global_UpholsteredColors,No,,,Global_UpholsteredColors,StringType,VALUE_LIST
+Global_FeltColors,No,,,Global_FeltColors,StringType,VALUE_LIST

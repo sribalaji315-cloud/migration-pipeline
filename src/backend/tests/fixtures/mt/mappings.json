@@ -1,0 +1,27 @@
+[
+  {
+    "itemId": "A5TBL01", "legacyFeatureId": "F100", "legacyValue": "F3468002", "newAttributeId": "ColorLevel3", "newValue": "F3468002",
+    "attributeType": "engineering", "condition": null, "formula": null, "mappedFrom": "group", "valueStatus": null,
+    "feasibility": "Yes", "inherited": "No", "signedOnByUserId": "USR-2", "signedOnByUsername": "admin",
+    "signedOnAt": 1793347200.0, "updatedAt": 1793527200.0,
+    "allGlobalTargets": ["ColorLevel3"], "candidateAttributeIds": ["ColorLevel3", "Color"], "prediction": null
+  },
+  {
+    "itemId": "A5TBL01", "legacyFeatureId": "F100", "legacyValue": "NA", "newAttributeId": "ColorLevel3", "newValue": "NA",
+    "attributeType": "engineering", "condition": "(( .#MMH <= 1400 LM0 ))", "formula": null, "mappedFrom": "global", "valueStatus": "discontinued",
+    "feasibility": "Conditional", "inherited": "No", "signedOnByUserId": "USR-2", "signedOnByUsername": "admin",
+    "signedOnAt": 1793347200.0, "updatedAt": 1793613600.0,
+    "allGlobalTargets": ["ColorLevel3"], "candidateAttributeIds": null, "prediction": null
+  },
+  {
+    "itemId": "00123", "legacyFeatureId": "F200", "legacyValue": "*", "newAttributeId": "Brand", "newValue": "NOT REQUIRED",
+    "attributeType": "engineering", "condition": null, "formula": null, "mappedFrom": "predicted", "valueStatus": null,
+    "feasibility": "Review", "inherited": "Yes", "signedOnByUserId": "USR-2", "signedOnByUsername": "admin",
+    "signedOnAt": 1793347200.0, "updatedAt": 1793700000.0,
+    "allGlobalTargets": ["Brand"], "candidateAttributeIds": ["Brand"],
+    "prediction": {
+      "status": "REVIEW REQUIRED", "confidence": "Medium", "matchType": "GLOBAL", "evidence": "fixture",
+      "prevAttributeId": "Brand", "prevValue": "*", "prevMappedFrom": "group", "predictedAt": 1793347200.0
+    }
+  }
+]

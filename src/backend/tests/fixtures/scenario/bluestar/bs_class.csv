@@ -1,0 +1,5 @@
+CLASSNAME,AXITEMTEMPLATE,CLASSDESCRIPTION,CLASSNAMEMASK,DIRTY,ENABLEDFORCLASSIFICATION,EXTENSCLASSNAME,KEYWORDS,NUMSEQUENCE,PARTNUMBERPATTERN,ROOTINALTTREE,SECONDARYROOT,STDPART,SUBTYPE
+Desks,,Desks,,No,Yes,FinishedGoods,Desks,ItemFG_A,,No,,No,normalClass
+Chairs,,Chairs,,No,Yes,FinishedGoods,Chairs,ItemFG_A,,No,,No,normalClass
+Sofas,,Sofas,,No,Yes,FinishedGoods,Sofas,ItemFG_A,,No,,No,normalClass
+Panels,,Panels,,No,Yes,FinishedGoods,Panels,ItemFG_A,,No,,No,normalClass

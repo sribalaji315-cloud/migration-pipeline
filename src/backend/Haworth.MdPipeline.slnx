@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/Haworth.MdPipeline.Api.Tests/Haworth.MdPipeline.Api.Tests.csproj" />
+    <Project Path="tests/Haworth.MdPipeline.Core.Tests/Haworth.MdPipeline.Core.Tests.csproj" />
+    <Project Path="tests/Haworth.MdPipeline.Pipeline.Tests/Haworth.MdPipeline.Pipeline.Tests.csproj" />
+  </Folder>
+  <Project Path="Haworth.MdPipeline.Api/Haworth.MdPipeline.Api.csproj" />
+  <Project Path="Haworth.MdPipeline.Core/Haworth.MdPipeline.Core.csproj" />
+  <Project Path="Haworth.MdPipeline.Data/Haworth.MdPipeline.Data.csproj" />
+  <Project Path="Haworth.MdPipeline.Pipeline/Haworth.MdPipeline.Pipeline.csproj" />
+</Solution>

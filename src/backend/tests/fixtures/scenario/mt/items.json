@@ -1,0 +1,10 @@
+[
+  { "itemId": "TOP", "description": "Desk", "category": "Desks", "priority": 1, "approvedForMigration": true, "features": [] },
+  { "itemId": "MID", "description": "Frame", "category": "Desks", "priority": 1, "approvedForMigration": true, "features": [] },
+  { "itemId": "LEAF", "description": "Foot", "category": "Desks", "priority": 1, "approvedForMigration": true, "features": [] },
+  { "itemId": "TOP2", "description": "Shelf", "category": "Shelves", "priority": 1, "approvedForMigration": true, "features": [] },
+  { "itemId": "LEAF2", "description": "Shelf board", "category": "Shelves", "priority": 1, "approvedForMigration": false, "features": [] },
+  { "itemId": "CLEAN", "description": "Clean table", "category": "Tables", "priority": 1, "approvedForMigration": true, "features": [] },
+  { "itemId": "CLEANLEAF", "description": "Leg", "category": "Tables", "priority": 1, "approvedForMigration": true, "features": [] },
+  { "itemId": "ORPHAN", "description": "Accessory", "category": "Accessories", "priority": 1, "approvedForMigration": true, "features": [] }
+]

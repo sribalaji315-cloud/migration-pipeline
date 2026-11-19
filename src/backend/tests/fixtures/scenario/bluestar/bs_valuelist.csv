@@ -1,0 +1,4 @@
+VALUELISTID,BS_VARIABLELISTFILTER,DESCRIPTION,PARENTVALUELISTID,VALUETYPE
+Global_Color,,Global_Color,,StringType
+Global_UpholsteredColors,,Global_UpholsteredColors,,StringType
+Global_FeltColors,,Global_FeltColors,,StringType

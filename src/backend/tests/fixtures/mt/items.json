@@ -1,0 +1,8 @@
+[
+  {
+    "itemId": "A5TBL01", "description": "Table base", "category": "Tables", "priority": 1, "approvedForMigration": true,
+    "features": [{ "featureId": "BRAND", "description": "Brand", "values": ["HWAP"], "valueDescriptions": { "HWAP": "Asia Pacific" } }]
+  },
+  { "itemId": "00123", "description": "Top", "category": "Tables", "priority": 2, "approvedForMigration": true, "features": [] },
+  { "itemId": "A34009801", "description": "Foot", "category": "Tables", "priority": 2, "approvedForMigration": false, "features": [] }
+]

@@ -1,0 +1,51 @@
+import { createTheme } from '@mantine/core'
+
+export const theme = createTheme({
+  primaryColor: 'nordBlue',
+  colors: {
+    nordBlue: ['#ECEFF4', '#D8DEE9', '#C8D1DF', '#AFC0D6', '#8FA9C8', '#5E81AC', '#4C6B91', '#3E5777', '#31455F', '#243448'],
+    nordFrost: ['#EFF8FA', '#DFF1F5', '#C7E7EF', '#B0DDE8', '#9CD1DF', '#88C0D0', '#6EA9BA', '#568D9D', '#407282', '#2B5866'],
+    nordTeal: ['#F0F8F8', '#DFF0F0', '#CBE7E6', '#B7DDDC', '#A3D1D0', '#8FBCBB', '#75A6A5', '#5D8D8C', '#467372', '#315958'],
+    nordGreen: ['#F3F7EF', '#E5EEDC', '#D3E2C4', '#C1D6AC', '#B2CC99', '#A3BE8C', '#89A672', '#6F8A5B', '#566D46', '#3E5032'],
+    nordRed: ['#FAEEEF', '#F2DADC', '#E7BEC2', '#DCA2A8', '#D0868E', '#BF616A', '#A34E57', '#853F46', '#683136', '#4B2327'],
+    nordAmber: ['#FDF8EE', '#FAEFD8', '#F5E3BA', '#F0D79C', '#EDD08A', '#EBCB8B', '#D0AD64', '#A98B4C', '#836B39', '#5E4C27'],
+  },
+  defaultRadius: 'sm',
+})
+
+/** Status → theme color token (never hex in components). */
+export const statusColor: Record<string, string> = {
+  Completed: 'nordGreen',
+  Published: 'nordGreen',
+  Ready: 'nordGreen',
+  Go: 'nordGreen',
+  Failed: 'nordRed',
+  Block: 'nordRed',
+  Highlight: 'nordRed',
+  Blocked: 'nordRed',
+  Review: 'nordFrost',
+  Running: 'nordFrost',
+  Syncing: 'nordFrost',
+  Writing: 'nordFrost',
+  Approve: 'nordAmber',
+  Warn: 'nordAmber',
+  Decision: 'nordAmber',
+  Queued: 'nordBlue',
+  Info: 'nordBlue',
+  READY: 'nordGreen',
+  EXPORTED: 'nordTeal',
+  Exported: 'nordTeal',
+  DECISION: 'nordAmber',
+  REVIEW: 'nordFrost',
+  BLOCKED: 'nordRed',
+  NOT_IMPORTED: 'nordRed',
+  Draft: 'nordBlue',
+  Open: 'nordAmber',
+  Acknowledged: 'nordBlue',
+  Resolved: 'nordGreen',
+  Pending: 'nordAmber',
+  Approved: 'nordGreen',
+  Rejected: 'nordRed',
+  Passed: 'nordGreen',
+  NotPassed: 'nordRed',
+}

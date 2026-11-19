@@ -1,0 +1,22 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+
+# Runtime data (SQLite metadata + Bronze/Silver/Gold layers)
+*.db
+*.db-shm
+*.db-wal
+src/backend/Haworth.MdPipeline.Api/data/
+
+# Frontend
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local secrets (template: .env.example)
+.env
+.env.*
+!.env.example

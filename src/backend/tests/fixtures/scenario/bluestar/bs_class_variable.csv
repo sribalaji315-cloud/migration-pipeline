@@ -1,0 +1,9 @@
+CLASSNAME,DISPLAYNAME,VARIABLENAME,ATTRIBUTEID,DEFAULTVALUE,DEFAULTVALUEINT,DEFAULTVALUEREAL,ECADATTRIBUTENAME,FIXEDDECIMAL,ISCADPARAMETER,ISCALCULATABLE,ISURL,LIFECYCLE,MANDATORY,OBSOLETE,SEQUENCE,SILICONEXPERTFIELD,TOLERANCEMINUS,TOLERANCEPLUS,UNIT,VALIDATECHILDDATA,VALUELISTID,VALUETYPE,VARIABLEVALUES
+Desks,Color,ColorLevel3,1,,0,.000000,,0,No,No,No,,No,No,1,,,,,No,Global_Color,StringType,VALUE_LIST
+Desks,Height,Height,2,,0,.000000,,0,No,No,No,,Yes,No,2,,,,mm,No,,IntegerType,
+Desks,Width,Width,3,,0,.000000,,0,No,No,No,,No,No,3,,,,mm,No,Global_Width,IntegerType,
+Desks,Back fabric,BackFabric,4,,0,.000000,,0,No,No,No,,No,No,4,,,,,No,Global_Color,StringType,VALUE_LIST
+Chairs,Fabric,ColorOfFabric,5,,0,.000000,,0,No,No,No,,No,No,1,,,,,No,Global_UpholsteredColors,StringType,VALUE_LIST
+Sofas,Fabric,ColorOfFabric,5,,0,.000000,,0,No,No,No,,No,No,1,,,,,No,Global_UpholsteredColors,StringType,
+Panels,Fabric,ColorOfFabric,5,,0,.000000,,0,No,No,No,,No,No,1,,,,,No,Global_FeltColors,StringType,VALUE_LIST
+Chairs,Old,LevelCombination,9,,0,.000000,,0,No,No,No,,No,Yes,9,,,,,No,Global_Color,StringType,VALUE_LIST

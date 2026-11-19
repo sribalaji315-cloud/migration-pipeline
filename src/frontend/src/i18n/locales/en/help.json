@@ -1,0 +1,163 @@
+{
+  "overview": {
+    "title": "About the overview",
+    "sections": [
+      {
+        "heading": "What this page shows",
+        "body": "The latest source snapshot (Bronze), the Bluestar reference version, the latest run and the Swing source issues found by the last analysis."
+      },
+      {
+        "heading": "Sync vs. analyse",
+        "body": "Sync reads Swing (GSST00 BOM, GSAR00 items) and the Migration Tool, stores a new snapshot and then analyses it. Analyse reuses the latest snapshot. Nothing is ever written back to Swing or the Migration Tool."
+      },
+      {
+        "heading": "Effective date and BOM types",
+        "body": "The effective date decides which BOM lines are valid. All BOM types are kept unless you choose specific types; both choices are stored with the run."
+      },
+      {
+        "heading": "Severities",
+        "body": "Block must be fixed in the source before export. Review needs a check. Warn and Info are for awareness."
+      }
+    ]
+  },
+  "runs": {
+    "title": "About runs",
+    "sections": [
+      {
+        "heading": "Run steps",
+        "body": "Each run lists its steps with row counts and durations. A failed step shows the error and stops the run."
+      },
+      {
+        "heading": "Bronze snapshots",
+        "body": "A snapshot is published only when every source extract succeeded. The content hashes show whether Swing data changed between snapshots."
+      }
+    ]
+  },
+  "swing": {
+    "title": "About the Swing BOM lookup",
+    "sections": [
+      {
+        "heading": "Import from Swing (Admin)",
+        "body": "Import Swing data now reads the complete BOM (GSST00) and item master (GSAR00), stores them as a new snapshot and analyses it with the chosen effective date and BOM types. Migration Tool data is reused from the previous snapshot. Use Test connection first if Swing was just configured."
+      },
+      {
+        "heading": "Item type",
+        "body": "The Swing type comes from GSAR00.ARVAKZ on the base record (ARMONR blank); model rows are ignored. 0 = FIXED, 2 = CONFIGURABLE. Any other value stays UNKNOWN and must be fixed in Swing."
+      },
+      {
+        "heading": "BOM lines",
+        "body": "Every GSST00 line is shown with position, type, model, quantity, phantom flag and validity dates. Click a line to open its child item."
+      },
+      {
+        "heading": "Pseudo (phantom)",
+        "body": "A component may be pseudo under one parent and not under another. That is valid and not an issue."
+      },
+      {
+        "heading": "Unresolved dates",
+        "body": "If validity dates cannot be read, the line stays in scope and blocks export until the date is fixed in Swing."
+      }
+    ]
+  },
+  "reference": {
+    "title": "About the Bluestar reference",
+    "sections": [
+      {
+        "heading": "Five files, one version",
+        "body": "Upload all five Bluestar files together. Each upload creates a new version; runs remember which version they used."
+      },
+      {
+        "heading": "Reuse only",
+        "body": "Global variables, value lists and values are only reused from these files. The pipeline never creates them."
+      }
+    ]
+  },
+  "migrationTool": {
+    "title": "About the Migration Tool import",
+    "sections": [
+      {
+        "heading": "What is imported",
+        "body": "Workspace mappings (legacy feature/value to target attribute/value) and item headers with the migration approval flag. Nothing is written back to the Migration Tool."
+      },
+      {
+        "heading": "Import changes vs. full re-import",
+        "body": "Import changes only fetches mappings updated since the last import and keeps the rest. Full re-import fetches everything again; use it if mappings were deleted or the result looks incomplete."
+      },
+      {
+        "heading": "Swing data first",
+        "body": "The import reuses the Swing BOM of the latest snapshot to know which items belong to the BOMs. Import Swing data (Swing BOM page) before the first Migration Tool import."
+      },
+      {
+        "heading": "Connection settings",
+        "body": "The address and either a bearer token (MigrationTool__BearerToken) or a user and password come from the server settings (.env). Bearer tokens expire: the page shows the expiry; when it has passed, paste a new token into .env and restart. Use Test connection to check access before importing."
+      }
+    ]
+  },
+  "waves": {
+    "title": "About BOM waves",
+    "sections": [
+      {
+        "heading": "Readiness",
+        "body": "Each top BOM is Ready, Decision (a type change waits for an Approver), Review, Blocked or Exported. It is computed over the BOM with all its children by the latest analysis; re-run the analysis after fixing sources."
+      },
+      {
+        "heading": "Create a wave",
+        "body": "Tick top BOMs and give the wave a name. The wave remembers the snapshot and Bluestar reference it was built on."
+      },
+      {
+        "heading": "The gate",
+        "body": "Export is all-or-nothing. It needs: no blocking or review issues, every item imported from the Migration Tool, all type changes approved, known item types, references that exist in Bluestar, and unchanged sources. If a newer snapshot or reference exists, run the analysis and use Refresh wave."
+      },
+      {
+        "heading": "Export files",
+        "body": "Six Bluestar import workbooks (classes, class attributes, objects, attribute values, inheritance links, conditions), an ISSUES workbook and manifest.json with versions, hashes and row counts. Global variables, lists and values are only referenced, never created."
+      }
+    ]
+  },
+  "itemClass": {
+    "title": "About the item class",
+    "sections": [
+      {
+        "heading": "One class per item",
+        "body": "Every migrated item gets its own class CL_<item> below CL_MIGRATED_ROOT. Its attributes come from the Migration Tool mappings (local) or from parents in the BOM (inherited)."
+      },
+      {
+        "heading": "Go, Highlight, Review",
+        "body": "Go: an existing Bluestar global variable covers all used values. Highlight: the best global variable misses some values (click the card to see them). Review: the attribute is not a Bluestar variable or has no clear owner."
+      },
+      {
+        "heading": "How the global variable is chosen",
+        "body": "A list that covers all values wins, then a free variable that accepts all values, then the best coverage; ties go to the variable used by the most Bluestar classes. Nothing is created or suggested."
+      }
+    ]
+  },
+  "issues": {
+    "title": "About issues",
+    "sections": [
+      {
+        "heading": "Groups",
+        "body": "Issues with the same cause are grouped (for example one value list). Fix the cause once in the named source and re-run the analysis; resolved groups disappear and come back if the problem returns."
+      },
+      {
+        "heading": "Where to fix",
+        "body": "Each tab is a fix source: Migration Tool mapping or approval, Bluestar class variables or value lists, Swing BOM or item master, or an MD Pipeline decision."
+      },
+      {
+        "heading": "Acknowledge",
+        "body": "Only Warn and Info groups can be acknowledged. Block and Review must be fixed; Approve is decided on the Type changes page."
+      }
+    ]
+  },
+  "typeChanges": {
+    "title": "About type changes",
+    "sections": [
+      {
+        "heading": "Why a fixed item becomes configurable",
+        "body": "When a Swing FIXED item inherits an attribute from a parent (for example a colour chosen on the desk), it needs configurable behaviour in Bluestar."
+      },
+      {
+        "heading": "Decisions",
+        "body": "Approvers approve or reject in bulk. A rejection blocks the BOMs that contain the item. The decision is reset to Pending when the inherited attributes or the Swing type change."
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "empty": "No Swing source issues in the latest analysis.",
+  "groupsEmpty": "No issue groups match.",
+  "itemsEmpty": "No occurrences.",
+  "page": {
+    "title": "Issues",
+    "allSources": "All sources",
+    "search": "Search (key, target, type)",
+    "bom": "Top BOM",
+    "bomPlaceholder": "e.g. A5TBL01",
+    "any": "Any",
+    "notResolved": "Open + acknowledged",
+    "total": "{{count}} issue groups"
+  },
+  "detail": {
+    "fixIn": "Fix in: {{source}}",
+    "fixTarget": "Target: {{target}}",
+    "seen": "First seen {{first}}, last seen {{last}} · {{items}} items · {{boms}} BOMs",
+    "acknowledged": "Acknowledged by {{user}}: {{note}}",
+    "note": "Note",
+    "acknowledge": "Acknowledge"
+  },
+  "status": {
+    "Open": "Open",
+    "Acknowledged": "Acknowledged",
+    "Resolved": "Resolved"
+  },
+  "columns": {
+    "severity": "Severity",
+    "issueType": "Issue",
+    "meaning": "What is wrong",
+    "fixSource": "Fix in",
+    "count": "Count",
+    "groupKey": "Group",
+    "fixTarget": "Target",
+    "items": "Items",
+    "boms": "BOMs",
+    "status": "Status",
+    "item": "Item",
+    "parent": "Parent",
+    "attribute": "Attribute",
+    "value": "Value",
+    "legacy": "Legacy feature = value",
+    "valueList": "Value list",
+    "detail": "Detail"
+  },
+  "severity": {
+    "Block": "Block",
+    "Review": "Review",
+    "Approve": "Approve",
+    "Warn": "Warn",
+    "Info": "Info"
+  },
+  "fixSource": {
+    "SwingBom": "Swing BOM (GSST00)",
+    "SwingItemMaster": "Swing item master (GSAR00)",
+    "MtWorkspaceMapping": "Migration Tool mapping",
+    "MtMigrationApproval": "Migration Tool approval",
+    "BluestarClassVariable": "Bluestar class variables",
+    "BluestarValueList": "Bluestar value list",
+    "MdPipelineDecision": "MD Pipeline decision",
+    "Rerun": "Rerun"
+  },
+  "types": {
+    "BOM_LINE_KEY_MISSING": "A BOM line has no parent or child item number.",
+    "BOM_DATE_UNRESOLVED": "Valid-from or valid-till date cannot be read; the line stays in scope until fixed.",
+    "PSEUDO_FLAG_UNKNOWN": "The phantom flag (STFIST) has a value that is not configured.",
+    "BOM_QUANTITY_UNPARSEABLE": "The BOM quantity (STMNG) is not a number.",
+    "ITEM_TYPE_UNKNOWN": "The item has no GSAR00 base record (ARMONR blank) or its ARVAKZ code is not supported.",
+    "ITEM_MODEL_AMBIGUOUS": "GSAR00 has several base records (ARMONR blank) with different ARVAKZ values; no row is chosen.",
+    "BOM_CHILD_MODEL_NOT_FOUND": "The child model (STMNRU) does not exist for the item in GSAR00.",
+    "BOM_LINE_KEY_NOT_UNIQUE": "Parent, BOM type and position occur on several lines (information only).",
+    "BOM_CYCLE": "The BOM contains a loop through this parent-child link.",
+    "MAPPING_MISSING": "An engineering mapping has no target attribute or value.",
+    "MAPPING_PENDING_REVIEW": "The mapping is predicted or marked for review and is not used until confirmed.",
+    "ATTRIBUTE_NOT_IN_BS": "The target attribute is not a Bluestar class variable.",
+    "VALUES_NOT_IN_VALUELIST": "Mapped values are missing in the Bluestar value list.",
+    "VALUES_INVALID_FOR_TYPE": "Mapped values are not valid for the variable's value type (e.g. text in a number).",
+    "INHERITED_ATTRIBUTE_MISSING_ON_TOP_ITEM": "A child needs the attribute from its parents, but no parent up to the top item defines it.",
+    "INHERITED_DEFINITION_CONFLICT": "Parents define the inherited attribute with different global variables or value lists.",
+    "FIXED_TO_CONFIGURABLE": "A Swing FIXED item inherits attributes and becomes CONFIGURABLE; an Approver must decide.",
+    "ITEM_NOT_APPROVED_FOR_MIGRATION": "The item is not approved for migration in the Migration Tool.",
+    "MT_ITEM_HEADER_MISSING": "The item has mappings but no Migration Tool item header."
+  }
+}
